@@ -1,0 +1,27 @@
+spring:
+  jpa:
+    hibernate.ddl-auto: update
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:172.17.0.2}:3306/prototype
+    username: proto_user
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: root
+    password: root
+
+server:
+  port: 8090
+
+renderf:
+  url:
+    client: http://localhost:8080
+  uri:
+    customer: /api/customers
+    task: /api/tasks
+  messaging:
+    task:
+      request: render.task.request
+      response: render.task.response

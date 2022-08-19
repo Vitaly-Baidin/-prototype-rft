@@ -1,0 +1,6 @@
+renderf:
+  server:
+    url: http://localhost:8090/api
+    uri:
+      customer: /customers
+      task: /tasks
